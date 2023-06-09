@@ -807,7 +807,7 @@ if [[ -f "$FILE_MENU" ]] \
         MENU LABEL Clonezilla x64
         KERNEL $FILE_BASE$NFS_ETH0/$CLONEZILLA_X64/live/vmlinuz
         INITRD $FILE_BASE$NFS_ETH0/$CLONEZILLA_X64/live/initrd.img
-        APPEND ip=dhcp nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X64 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
+        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X64 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
         TEXT HELP
             Boot to Clonezilla x64
             User: user, Password: live
@@ -826,7 +826,7 @@ if [[ -f "$FILE_MENU" ]] \
         MENU LABEL Clonezilla x86
         KERNEL $FILE_BASE$NFS_ETH0/$CLONEZILLA_X86/live/vmlinuz
         INITRD $FILE_BASE$NFS_ETH0/$CLONEZILLA_X86/live/initrd.img
-        APPEND ip=dhcp nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X86 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
+        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X86 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
         TEXT HELP
             Boot to Clonezilla x86
             User: user, Password: live
