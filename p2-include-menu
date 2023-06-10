@@ -923,6 +923,22 @@ fi
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
+&& [[ -f "$DST_NFS_ETH0/$MEMTEST_X86/casper/vmlinuz" ]]; then
+    echo  -e "\e[36m    add $MEMTEST_X86\e[0m";
+    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
+    ########################################
+    LABEL $MEMTEST_X86
+        MENU LABEL memtest-x86
+        KERNEL $FILE_BASE$NFS_ETH0/$MEMTEST_X86/memtest-x86/isolinux/memtest
+        TEXT HELP
+            no help here 
+        ENDTEXT
+EOF
+fi
+#=========== END ===========
+
+#========== BEGIN ==========
+if [[ -f "$FILE_MENU" ]] \
 && [[ -f "$DST_NFS_ETH0/$OPENSUSE_RESCUE_X64/boot/x86_64/loader/linux" ]]; then
     echo  -e "\e[36m    add $OPENSUSE_RESCUE_X64\e[0m";
     cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
