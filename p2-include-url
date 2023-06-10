@@ -209,6 +209,8 @@ LUBUNTU_LTS_X86_URL=https://cdimage.ubuntu.com/lubuntu/releases/18.04/release/lu
 LUBUNTU_LTS_X86_SUM=https://cdimage.ubuntu.com/lubuntu/releases/18.04/release/SHA256SUMS
 LUBUNTU_LTS_X86_SUM_TYPE=sha256
 
+MEMTEST_X86=memtest-x86
+MEMTEST_X86_URL=https://github.com/beed2112/memtest/raw/masterOfAll/Memtest86-4.3.7.iso
 
 MINT_X64=mint-x64
 MINT_X64_URL=https://mirrors.edge.kernel.org/linuxmint/stable/21.1/linuxmint-21.1-cinnamon-64bit.iso
