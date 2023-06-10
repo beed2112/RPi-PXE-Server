@@ -929,7 +929,7 @@ if [[ -f "$FILE_MENU" ]] \
     ########################################
     LABEL $MEMTEST_X86
         MENU LABEL memtest-x86
-        KERNEL $FILE_BASE$NFS_ETH0/$MEMTEST_X86/memtest-x86/isolinux/memtest
+        KERNEL $FILE_BASE$NFS_ETH0/$MEMTEST_X86/isolinux/memtest
         TEXT HELP
             no help here 
         ENDTEXT
