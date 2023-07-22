@@ -799,6 +799,23 @@ fi
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
+&& [[ -f "$DST_NFS_ETH0/$DODWIPE/DBAN.BZI" ]]; then
+    echo  -e "\e[36m    add $DODWIPE\e[0m";
+    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
+    ########################################
+    LABEL $DODWIPE
+        MENU LABEL dodwipe automatic
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dodwipe/isolinux/DBAN.BZI APPEND nuke="dwipe --autonuke --method zero" silent
+        TEXT HELP
+            no help here 
+        ENDTEXT
+
+EOF
+fi
+#=========== END ===========
+
+#========== BEGIN ==========
+if [[ -f "$FILE_MENU" ]] \
 && [[ -f "$DST_NFS_ETH0/$CLONEZILLA_X64/live/vmlinuz" ]]; then
     echo  -e "\e[36m    add $CLONEZILLA_X64\e[0m";
     cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
@@ -807,7 +824,7 @@ if [[ -f "$FILE_MENU" ]] \
         MENU LABEL Clonezilla x64
         KERNEL $FILE_BASE$NFS_ETH0/$CLONEZILLA_X64/live/vmlinuz
         INITRD $FILE_BASE$NFS_ETH0/$CLONEZILLA_X64/live/initrd.img
-        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X64 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
+        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X64 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_prerun3="sshfs beed2112@192.168.0.125:/mnt/backs/image/ /home/partimag/" ocs_live_extra_param= ocs_live_batch=yes net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
         TEXT HELP
             Boot to Clonezilla x64
             User: user, Password: live
@@ -815,6 +832,8 @@ if [[ -f "$FILE_MENU" ]] \
 EOF
 fi
 #=========== END ===========
+
+
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
@@ -826,7 +845,7 @@ if [[ -f "$FILE_MENU" ]] \
         MENU LABEL Clonezilla x86
         KERNEL $FILE_BASE$NFS_ETH0/$CLONEZILLA_X86/live/vmlinuz
         INITRD $FILE_BASE$NFS_ETH0/$CLONEZILLA_X86/live/initrd.img
-        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X86 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_live_extra_param= ocs_live_batch=no net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
+        APPEND  nfsroot=$IP_ETH0:$DST_NFS_ETH0/$CLONEZILLA_X86 ro netboot=nfs boot=live config username=user hostname=clonezilla union=overlay components noswap edd=on nomodeset nodmraid ocs_live_run=ocs-live-general ocs_daemonon="ssh" ocs_prerun3="sshfs beed2112@192.168.0.125:/mnt/backs/image/ /home/partimag/" ocs_live_extra_param= ocs_live_batch=yes net.ifnames=0 nosplash noprompt -- locales=$CUSTOM_LOCALE keyboard-layouts=$CUSTOM_LAYOUTCODE utc=no timezone=$CUSTOM_TIMEZONE
         TEXT HELP
             Boot to Clonezilla x86
             User: user, Password: live
