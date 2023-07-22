@@ -47,7 +47,7 @@ fi
 ########################################################################
 #-----------+----+-----+------------------------+-----------------------
 #exec       |act.|type |VAR. name of item       |optional options
-handle_item  '-'  iso   BLACKARCH_X64;
+handle_item  '+'  iso   BLACKARCH_X64;
 handle_item  '-'  iso   BUNSEN_X64;
 handle_item  '+'  iso   CLONEZILLA_X64;
 handle_item  '+'  iso   CLONEZILLA_X86;
@@ -61,8 +61,8 @@ handle_item  '-'  iso   EMMABUNTUS_X64;
 handle_item  '-'  iso   EMMABUNTUS_X86;
 handle_item  '+'  iso   FEDORA_X64;
 handle_item  '-'  iso   FINNIX_X64;
-handle_item  '-'  iso   GNURADIO_X64;
-handle_item  '-'  iso   KALI_X64;
+handle_item  '+'  iso   GNURADIO_X64;
+handle_item  '+'  iso   KALI_X64;
 handle_item  '#'  iso   KASPERSKY_RESCUE_X86     timestamping;
 handle_item  '-'  iso   KNOPPIX_X86;
 handle_item  '#'  iso   LUBUNTU_DAILY_X64        timestamping;
