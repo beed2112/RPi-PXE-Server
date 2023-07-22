@@ -142,7 +142,7 @@ dhcp-option=tag:${INTERFACE_ETH0:?}, option:tftp-server, 0.0.0.0
 
 ##########
 # Time Server
-dhcp-option=tag:${INTERFACE_ETH0:?},  option:ntp-server,  0.0.0.0
+dhcp-option=tag:${INTERFACE_ETH0:?},  option:ntp-server,  132.163.96.3
 dhcp-option=tag:${INTERFACE_ETH0:?},  option6:ntp-server, [::]
 
 ##########
@@ -160,6 +160,9 @@ dhcp-mac=set:block, 28:c6:8e:*:*:*
 # dynamic IP
 dhcp-range=tag:${INTERFACE_ETH0:?},  tag:!block,  fd80::${IP_ETH0_START:?}, fd80::${IP_ETH0_END:?}, 120, 1h
 dhcp-range=tag:${INTERFACE_ETH0:?},  tag:!block,  ${IP_ETH0_START:?}, ${IP_ETH0_END:?}, 255.255.255.0, 1h
+
+dhcp-option=eth0,3,192.168.0.1
+dhcp-option=eth0,6,192.168.0.240, 192.168.0.241
 
 ##########
 # DNS (enabled)
