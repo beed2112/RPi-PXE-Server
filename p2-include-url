@@ -129,8 +129,8 @@ DEVUAN_X86_URL=https://files.devuan.org/devuan_chimaera/desktop-live/devuan_chim
 DEVUAN_X86_SUM=https://files.devuan.org/devuan_chimaera/desktop-live/SHA256SUMS.txt
 DEVUAN_X86_SUM_TYPE=sha256
 
-$DODWIPE=memtest-x86
-$DODWIPE_URL=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
+DODWIPE=memtest-x86
+DODWIPE_URL=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
 DRAGONOS_X64=dragonos-x64
 DRAGONOS_X64_URL=https://downloads.sourceforge.net/project/dragonos-focal/DragonOS_FocalX_R30.2.iso
