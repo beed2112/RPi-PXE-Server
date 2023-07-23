@@ -174,9 +174,9 @@ GNURADIO_X64=gnuradio-x64
 
 
 KALI_X64=kali-x64
-KALI_X64_URL=https://cdimage.kali.org/current/kali-linux-2023.1-live-amd64.iso
-KALI_X64_SUM=https://cdimage.kali.org/current/SHA256SUMS
-KALI_X64_SUM_TYPE=sha256
+KALI_X64_URL=https://cdimage.kali.org/kali-2023.2/kali-linux-2023.2-live-amd64.iso
+#KALI_X64_SUM=https://cdimage.kali.org/current/SHA256SUMS
+#KALI_X64_SUM_TYPE=sha256
 
 
 KASPERSKY_RESCUE_X86=kaspersky-rescue-x86
