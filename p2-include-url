@@ -129,19 +129,19 @@ DEVUAN_X86_URL=https://files.devuan.org/devuan_chimaera/desktop-live/devuan_chim
 DEVUAN_X86_SUM=https://files.devuan.org/devuan_chimaera/desktop-live/SHA256SUMS.txt
 DEVUAN_X86_SUM_TYPE=sha256
 
-DODWIPE=memtest-x86
+DODWIPE=dodwipe
 DODWIPE_URL=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
-DODWIPE1=memtest-x86
+DODWIPE1=dodwipe1
 DODWIPE_URL1=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
-DODWIPE2=memtest-x86
+DODWIPE2=dodwipe2
 DODWIPE_URL2=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
-DODWIPE3=memtest-x86
+DODWIPE3=dodwipe3
 DODWIPE_URL3=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
-DODWIPE4=memtest-x86
+DODWIPE4=dodwipe4
 DODWIPE_URL4=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
 
