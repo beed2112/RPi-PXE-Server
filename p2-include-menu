@@ -805,7 +805,7 @@ if [[ -f "$FILE_MENU" ]] \
     ########################################
     LABEL $DODWIPE
         MENU LABEL Boot and Nuke - anual setup
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dodwipe/dban.bzi 
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi 
         TEXT HELP
             no help here 
         ENDTEXT
@@ -813,6 +813,24 @@ if [[ -f "$FILE_MENU" ]] \
 EOF
 fi
 #=========== END ===========
+
+#========== BEGIN ==========
+if [[ -f "$FILE_MENU" ]] \
+&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
+    echo  -e "\e[36m    add $DODWIPE\e[0m";
+    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
+    ########################################
+    LABEL $DODWIPE1
+        MENU LABEL Boot and Nuke - dod3pass automatic
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi APPEND nuke="dwipe --autonuke --method dod3pass" silent
+        TEXT HELP
+            no help here 
+        ENDTEXT
+
+EOF
+fi
+#=========== END ===========
+
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
@@ -821,26 +839,8 @@ if [[ -f "$FILE_MENU" ]] \
     cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
     ########################################
     LABEL $DODWIPE2
-        MENU LABEL Boot and Nuke - dod3pass automatic
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dodwipe/dban.bzi APPEND nuke="dwipe --autonuke --method dod3pass" silent
-        TEXT HELP
-            no help here 
-        ENDTEXT
-
-EOF
-fi
-#=========== END ===========
-
-
-#========== BEGIN ==========
-if [[ -f "$FILE_MENU" ]] \
-&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
-    echo  -e "\e[36m    add $DODWIPE\e[0m";
-    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
-    ########################################
-    LABEL $DODWIPE3
         MENU LABEL Boot and Nuke - paranoid 8 pass - verify automatic
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dodwipe/dban.bzi APPEND nuke="dwipe --autonuke --method prng --rounds 8 --verify all" silent
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi APPEND nuke="dwipe --autonuke --method prng --rounds 8 --verify all" silent
         TEXT HELP
             no help here 
         ENDTEXT
