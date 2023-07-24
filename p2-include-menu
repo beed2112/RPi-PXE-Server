@@ -798,17 +798,17 @@ fi
 #=========== END ===========
 
 #========== BEGIN ==========
-if [[ -f "$FILE_MENU" ]] \
-&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
-    echo  -e "\e[36m    add $DODWIPE\e[0m";
-    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
-    ########################################
-    LABEL $DODWIPE
-        MENU LABEL Boot and Nuke - anual setup
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi 
-        TEXT HELP
-            no help here 
-        ENDTEXT
+#if [[ -f "$FILE_MENU" ]] \
+#&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
+#    echo  -e "\e[36m    add $DODWIPE\e[0m";
+#    cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
+#    ########################################
+#    LABEL $DODWIPE
+#        MENU LABEL Boot and Nuke - anual setup
+#        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi 
+#        TEXT HELP
+#            no help here 
+#        ENDTEXT
 
 EOF
 fi
