@@ -810,8 +810,8 @@ fi
 #            no help here 
 #        ENDTEXT
 
-EOF
-fi
+#EOF
+#fi
 #=========== END ===========
 
 #========== BEGIN ==========
