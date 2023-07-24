@@ -132,6 +132,20 @@ DEVUAN_X86_SUM_TYPE=sha256
 DODWIPE=memtest-x86
 DODWIPE_URL=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
 
+DODWIPE1=memtest-x86
+DODWIPE_URL1=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
+
+DODWIPE2=memtest-x86
+DODWIPE_URL2=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
+
+DODWIPE3=memtest-x86
+DODWIPE_URL3=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
+
+DODWIPE4=memtest-x86
+DODWIPE_URL4=https://github.com/beed2112/dban/raw/masterOfAll/dban-2.3.0_i586.iso
+
+
+
 DRAGONOS_X64=dragonos-x64
 DRAGONOS_X64_URL=https://downloads.sourceforge.net/project/dragonos-focal/DragonOS_FocalX_R30.2.iso
 DRAGONOS_X64_SUM=https://downloads.sourceforge.net/project/dragonos-focal/DragonOS_FocalX_R30.2.iso.sha256
