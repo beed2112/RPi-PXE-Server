@@ -816,13 +816,13 @@ fi
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
-&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
-    echo  -e "\e[36m    add $DODWIPE\e[0m";
+&& [[ -f "$DST_NFS_ETH0/$DODWIPE1/dban.bzi" ]]; then
+    echo  -e "\e[36m    add $DODWIPE1\e[0m";
     cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
     ########################################
     LABEL $DODWIPE1
         MENU LABEL Boot and Nuke - dod3pass automatic
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi APPEND nuke="dwipe --autonuke --method dod3pass" silent
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE1/dban.bzi APPEND nuke="dwipe --autonuke --method dod3pass" silent
         TEXT HELP
             no help here 
         ENDTEXT
@@ -834,13 +834,13 @@ fi
 
 #========== BEGIN ==========
 if [[ -f "$FILE_MENU" ]] \
-&& [[ -f "$DST_NFS_ETH0/$DODWIPE/dban.bzi" ]]; then
-    echo  -e "\e[36m    add $DODWIPE\e[0m";
+&& [[ -f "$DST_NFS_ETH0/$DODWIPE2/dban.bzi" ]]; then
+    echo  -e "\e[36m    add $DODWIPE2\e[0m";
     cat << EOF | sudo tee -a $FILE_MENU &>/dev/null
     ########################################
     LABEL $DODWIPE2
         MENU LABEL Boot and Nuke - paranoid 8 pass - verify automatic
-        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE/dban.bzi APPEND nuke="dwipe --autonuke --method prng --rounds 8 --verify all" silent
+        KERNEL $FILE_BASE$NFS_ETH0/$DODWIPE2/dban.bzi APPEND nuke="dwipe --autonuke --method prng --rounds 8 --verify all" silent
         TEXT HELP
             no help here 
         ENDTEXT
