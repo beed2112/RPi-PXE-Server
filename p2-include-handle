@@ -57,6 +57,8 @@ handle_item  '-'  iso   DEVUAN_X64;
 handle_item  '-'  iso   DEVUAN_X86;
 handle_item  '-'  iso   DRAGONOS_X64;
 handle_item  '+'  iso   DODWIPE;
+handle_item  '+'  iso   DODWIPE1;
+handle_item  '+'  iso   DODWIPE2;
 handle_item  '-'  iso   ESET_SYSRESCUE_X86;
 handle_item  '-'  iso   EMMABUNTUS_X64;
 handle_item  '-'  iso   EMMABUNTUS_X86;
